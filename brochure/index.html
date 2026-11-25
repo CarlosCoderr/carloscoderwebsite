@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Método Cero Caos · Carlos Coder</title>
+<link rel="icon" href="../assets/img/carlos-coder.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/css/deck.css">
+<link rel="stylesheet" href="brochure.css">
+<script src="../assets/js/core.js" defer></script>
+<script src="../assets/js/deck.js" defer></script>
+<script src="brochure.js" defer></script>
+</head>
+<body class="deck" data-wa-message="Hola Carlos, quiero ordenar mi negocio. Escribo desde la landing por el Diagnóstico Cero Caos de S/ 300.">
+
+<div id="rot"><div><span>⟳</span>Gira tu celular en horizontal<br><small style="font-weight:500;color:#a1a1aa">El brochure se ve de lado a lado.</small></div></div>
+
+<div id="viewport">
+  <div id="stage">
+    <div id="prog"></div>
+    <button class="arrow" id="aL" aria-label="Anterior">←</button>
+    <button class="arrow" id="aR" aria-label="Siguiente">→</button>
+    <div id="track">
+
+<!-- 1 PORTADA -->
+<section class="slide cover">
+  <div class="brand"><img src="../assets/img/carlos-coder.svg" alt=""><span>Carlos Coder</span></div>
+  <div class="main">
+    <div>
+      <div class="tag">Método Cero Caos</div>
+      <h1>Tu problema no es que te falten <em>seguidores.</em></h1>
+      <p class="sub">Un sistema que ordena tu oferta, arma el camino por donde te compran y opera tu pauta, para que dejes de vender <b>“de casualidad”</b>.</p>
+    </div>
+    <div class="trio">
+      <div><b>01</b>Una oferta que se entiende al primer vistazo.</div>
+      <div><b>02</b>Un camino de compra donde no se pierde ningún mensaje.</div>
+      <div><b>03</b>Una pauta operada por mí desde el día 15.</div>
+    </div>
+  </div>
+  <div class="pie"><span><b>Carlos Coder</b> · @carloscoderr · +51 921 926 452</span><span class="hint">Desliza o usa las flechas →</span></div>
+</section>
+
+<!-- 2 PROBLEMA -->
+<section class="slide">
+  <div class="eyebrow">El problema</div>
+  <h2>¿Te suena esto?</h2>
+  <div class="scenes">
+    <div class="scene"><div class="n">1</div><h3>Un mes sí, otro no.</h3><p>Un mes cierras varias consultas seguidas. Al siguiente no entra nada. Cuando miras tu cuenta bancaria no sabes de qué dependió.</p></div>
+    <div class="scene"><div class="n">2</div><h3>El link de la bio.</h3><p>Pagaste una web “profesional”. Hoy es un escaparate: se ve bien y no te trae ninguna venta.</p></div>
+    <div class="scene"><div class="n">3</div><h3>El WhatsApp.</h3><p>Abres WhatsApp y los chats de la semana pasada siguen sin respuesta. Alguien preguntó el precio y desapareció.</p></div>
+    <div class="scene"><div class="n">4</div><h3>Los anuncios.</h3><p>Le diste a “Promocionar” o le pagaste a alguien barato. Te llegaron curiosos sin presupuesto y concluiste: “los anuncios no funcionan para mi negocio”.</p></div>
+    <div class="scene"><div class="n">5</div><h3>La oferta mezclada.</h3><p>Vendes consultas sueltas, un programa y un PDF a la vez. Quien entra a tu perfil pregunta: “¿y tú qué vendes exactamente?”.</p></div>
+  </div>
+  <div class="close">Ninguna de estas cosas es un problema de audiencia. Son síntomas de un negocio que opera en el caos.</div>
+  <div class="foot"><span><b>Método Cero Caos</b> · Carlos Coder</span></div>
+</section>
+
+<!-- 3 COSTO -->
+<section class="slide">
+  <div class="eyebrow">Cuánto te cuesta el caos</div>
+  <h2 class="wide">Antes de hablar de precio, hagamos una cuenta.</h2>
+  <div class="calc">
+    <div class="form">
+      <div class="field"><label for="c-ads">Dinero en anuncios que no trajeron clientes</label><div class="money"><span>S/</span><input id="c-ads" type="number" min="0" inputmode="numeric" placeholder="0"></div></div>
+      <div class="field"><label for="c-web">Dinero en una web que no vende</label><div class="money"><span>S/</span><input id="c-web" type="number" min="0" inputmode="numeric" placeholder="0"></div></div>
+      <div class="field"><label for="c-meses">Meses en cero en el último año<small>los que casi no entró nada</small></label><div class="money"><span>N°</span><input id="c-meses" type="number" min="0" max="12" inputmode="numeric" placeholder="0"></div></div>
+      <div class="field"><label for="c-mes">Lo que facturas en un mes normal</label><div class="money"><span>S/</span><input id="c-mes" type="number" min="0" inputmode="numeric" placeholder="0"></div></div>
+    </div>
+    <div class="out" aria-live="polite">
+      <p>¿Cuánto sumaste tú?</p>
+      <div class="tot" id="calcTotal">S/ 0</div>
+      <p id="calcBreak" class="small" style="color:#a1a1aa">Completa los campos para ver el total.</p>
+      <p class="cmp">El primer paso, el <b>Diagnóstico Cero Caos</b>, cuesta <b>S/ 300</b> y se descuenta por completo si decides avanzar.</p>
+    </div>
+  </div>
+  <div class="close">El precio de este método se compara contra lo que hoy estás perdiendo, no contra el costo de una web.</div>
+  <div class="foot"><span><b>Método Cero Caos</b> · Carlos Coder</span></div>
+</section>
+
+<!-- 4 HISTORIA -->
+<section class="slide">
+  <div class="eyebrow">Mi historia</div>
+  <div class="about">
+    <div class="ph"><img src="../assets/img/carlos.jpg" alt="Carlos Coder"></div>
+    <div class="tx">
+      <h2 style="margin-bottom:16px">Yo estuve del otro lado.</h2>
+      <p>Desde marzo de 2023 entregaba hasta 4 páginas web al mes. Pasaba más de 10 horas diarias frente a la pantalla, cobraba poco y no tenía ni un cliente recurrente. Cada mes empezaba de cero a buscar el próximo contrato.</p>
+      <p>Era “el chico de las webs”. Un ejecutante, no un socio. Y lo peor era darme cuenta de que las webs que entregaba eran escaparates: bonitas, pero sin nada detrás que vendiera.</p>
+      <p>Entonces dejé de aceptar proyectos de solo diseño. Me capacité en sistemas de conversión (el camino que recorre alguien hasta comprar), psicología de ventas y pauta en Meta y Google. Junté lo técnico con la captación de clientes. <b>De ahí salió el Método Cero Caos.</b></p>
+      <p>Hoy hago yo solo lo que normalmente reparten tres personas: construyo tu landing, armo tu captación automática y opero tu pauta. Tratas directo conmigo.</p>
+      <div class="quote" style="font-size:20px;margin:6px 0 8px">“Deja de hacer páginas web que solo sirven de adorno; conviértete en el socio que diseña el sistema de ingresos que el negocio necesita.”</div>
+      <p style="font-weight:800;color:var(--ink);margin:0">Carlos Coder <span style="font-weight:500;color:var(--muted)">· Arquitecto de Sistemas de Venta Digital</span></p>
+    </div>
+  </div>
+  <div class="foot"><span><b>Método Cero Caos</b> · Carlos Coder</span></div>
+</section>
+
+<!-- 5 MÉTODO -->
+<section class="slide">
+  <div class="eyebrow">El método</div>
+  <h2 class="wide" style="margin-bottom:16px">Cuatro pasos, en este orden. La pauta va al final.</h2>
+  <div class="method">
+    <div class="steps" id="steps" role="tablist"></div>
+    <div class="mpanel">
+      <div class="toggle" role="group" aria-label="Antes o después"><button type="button" data-m="0" aria-pressed="true">Hoy</button><button type="button" data-m="1" aria-pressed="false">Con el método</button></div>
+      <div class="da" id="da"></div>
+      <p class="two">Tú solo haces dos cosas: <span class="sage">crear contenido y cerrar ventas.</span> Lo demás lo construyo y lo opero yo.</p>
+    </div>
+  </div>
+  <div class="diff">
+    <div><b>Los anuncios van al final</b>No al principio.</div>
+    <div><b>Lo construyo y lo opero yo</b>No coordinas a un diseñador, un programador y un trafficker.</div>
+    <div><b>Capacito a quien atiende tu WhatsApp</b>Casi nadie lo hace, y ahí se pierden las ventas.</div>
+  </div>
+  <div class="foot"><span><b>Método Cero Caos</b> · Carlos Coder</span></div>
+</section>
+
+<!-- 6 QUÉ RECIBES -->
+<section class="slide">
+  <div class="eyebrow">Qué recibes</div>
+  <h2 style="margin-bottom:16px">Qué recibes y cuándo.</h2>
+  <div class="tabs" data-tabs>
+    <button class="tab" aria-selected="true" data-t="ent">Entregables</button>
+    <button class="tab" aria-selected="false" data-t="dias">Los 15 días</button>
+    <button class="tab" aria-selected="false" data-t="app">Coder App (incluido)</button>
+    <button class="tab" aria-selected="false" data-t="prom">Lo que prometo y lo que no</button>
+  </div>
+  <div class="pbox">
+    <div class="pane open" data-p="ent"><div class="card tint grid2" style="padding:28px 32px;row-gap:18px">
+      <div class="chk"><i>✓</i><span>Tu <b>oferta única</b> definida por escrito.</span></div>
+      <div class="chk"><i>✓</i><span>Tu <b>landing page</b> de conversión, publicada en un subdominio de carloscoder.com (dominio propio opcional).</span></div>
+      <div class="chk"><i>✓</i><span>Tu <b>captación automatizada</b>, adaptada a tu modelo de venta: pasarela de pago, agenda de citas o WhatsApp y correo.</span></div>
+      <div class="chk"><i>✓</i><span>Una <b>capacitación de respuesta y cierre</b> (en WhatsApp o en el canal que use tu negocio), con guía de respuesta.</span></div>
+      <div class="chk"><i>✓</i><span>Tu <b>mensaje y contenido pilar</b>.</span></div>
+      <div class="chk"><i>✓</i><span><b>Pauta operada</b> en Meta/Google desde el día 15, con ajustes continuos.</span></div>
+      <div class="chk"><i>✓</i><span><b>Informe mensual</b> con números.</span></div>
+      <div class="chk"><i>✓</i><span><b>Coder App</b> incluido mientras tu plan esté activo.</span></div>
+    </div></div>
+    <div class="pane" data-p="dias">
+      <div class="road">
+        <div class="st"><b>Al pagar</b><p>Me entregas tus accesos y material. El conteo de los 15 días empieza cuando los tengo.</p></div>
+        <div class="st"><b>Bloque 1</b><p>Diagnóstico y definición de tu oferta única.</p></div>
+        <div class="st"><b>Bloque 2</b><p>Construcción de la landing y del camino de compra (pasarela, agenda o WhatsApp, según tu negocio).</p></div>
+        <div class="st"><b>Bloque 3</b><p>Capacitación de respuesta y cierre.</p></div>
+        <div class="st go"><b>Día 15</b><p><strong>Lanzamiento:</strong> se enciende la pauta.</p></div>
+        <div class="st"><b>Desde el día 15</b><p>Se miden resultados con números y se ajusta cada mes.</p></div>
+      </div>
+      <p class="small" style="margin-top:16px;font-size:14px">Si demoras en entregar tus accesos o material, los 15 días se pausan.</p>
+    </div>
+    <div class="pane" data-p="app">
+      <p style="margin-bottom:12px;font-size:15px">Tu herramienta de automatización, procesos, flujos y CRM, incluida mientras el plan esté activo. Si ya tienes web, landing, pasarela o agenda, se acopla a lo que ya usas.</p>
+      <div class="app3">
+        <div class="card"><h4>Para vender</h4><ul>
+          <li><b>Automatizaciones</b> por WhatsApp y correo, con herramientas de marketing integradas.</li>
+          <li><b>Flujos condicionales</b> y <b>respuestas a anuncios específicos.</b></li>
+          <li><b>Métricas de tus anuncios</b> en la misma plataforma.</li>
+          <li><b>Agente de IA de ventas</b> configurable sin código: entiende el contexto, no responde como robot.</li>
+          <li><b>Agendamiento de citas</b> con confirmaciones y recordatorios.</li>
+          <li><b>Recuperación de carritos abandonados.</b></li></ul></div>
+        <div class="card"><h4>Para fidelizar</h4><ul>
+          <li><b>Estrategias de fidelización.</b></li>
+          <li><b>Mensajes automáticos por cumpleaños.</b></li></ul></div>
+        <div class="card"><h4>Para controlar tu negocio</h4><ul>
+          <li><b>Gastos operativos y balance.</b></li>
+          <li><b>Base de clientes.</b></li>
+          <li><b>Guion de venta</b> y <b>analizador de mensajes.</b></li></ul></div>
+      </div>
+      <p class="small" style="margin-top:10px">Coder App no procesa cobros ni aloja cursos: se integra con la pasarela o plataforma que ya uses.</p>
+    </div>
+    <div class="pane" data-p="prom">
+      <div class="pn">
+        <div class="card" style="background:var(--yes-bg);border-color:#bbf7d0"><h3 style="color:var(--yes)">Lo que prometo (depende de mí)</h3>Una oferta clara, una landing y captación que no dejan prospectos perdidos, alguien capacitado para responder, y una pauta operada por mí desde el día 15.</div>
+        <div class="card tint"><h3 style="color:var(--no)">Lo que no prometo</h3>Un número de ventas ni de mensajes, resultados en 30 días, ni que funcione si no creas contenido ni cierras ventas.</div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span><b>Método Cero Caos</b> · Carlos Coder</span></div>
+</section>
+
+<!-- 7 CASO -->
+<section class="slide">
+  <div class="eyebrow">Caso real</div>
+  <h2 class="wide" style="margin-bottom:14px;font-size:36px">Un caso real, contado como lo que es.</h2>
+  <div class="case">
+    <div style="display:flex;flex-direction:column">
+      <p style="font-size:15.5px;margin-bottom:14px">Un negocio de servicios de ticket alto <span class="small">(una agencia de marketing que vende a centros estéticos)</span> recibía curiosos y operaba con procesos desordenados. Su camino de compra no estaba claro y dependía de campañas sin estructura.</p>
+      <h3 style="margin-bottom:10px;font-size:17px">Qué se hizo, en 3 pasos</h3>
+      <ul class="hechos">
+        <li><span class="num">1</span><span>Diagnóstico de su oferta y reestructuración del proceso comercial.</span></li>
+        <li><span class="num">2</span><span>Diseño e implementación de la landing y del camino de compra.</span></li>
+        <li><span class="num">3</span><span>Capacitación del equipo completo y activación de Meta Ads.</span></li>
+      </ul>
+      <div class="disc"><b>Aclaración</b>Mi cliente fue la agencia. El cliente de S/ 3,000 es de ella, conseguido con el sistema que implementé y que le enseñé a operar. Es un solo caso real, no una garantía. Fue un negocio de ticket alto con equipo comercial; el presupuesto de pauta mínimo que recomiendo para ti es de S/ 400 al mes.</div>
+    </div>
+    <div>
+      <div class="rhead"><div class="v">S/ 170 → S/ 3,000</div><div class="l">Lo que invirtieron en anuncios → lo que entró con un solo cliente</div></div>
+      <div class="stats" id="stats">
+        <div class="stat"><div class="v" data-count="17">17</div><div class="l">personas interesadas en la primera semana</div></div>
+        <div class="stat"><div class="v" data-count="10" data-pre="S/ ">S/ 10</div><div class="l">lo que costó cada una</div></div>
+        <div class="stat big"><div class="v">casi S/ 18</div><div class="l">de venta por cada S/ 1 puesto en anuncios</div></div>
+      </div>
+      <p class="small" style="margin-top:10px">Cuenta solo de los anuncios de este caso. No incluye mi trabajo y no es una garantía de que te pase lo mismo.</p>
+      <p class="tech">Dato técnico, para quien lo pida: ROAS 17.65 · ROI 1,665%.</p>
+      <p style="margin-top:12px;font-size:15px">En menos de 10 días, con seguimiento por WhatsApp y llamada, cerró 1 cliente calificado de S/ 3,000, que continuó con la agencia en retención mensual. <b>Después del proyecto, me sumaron a su equipo.</b></p>
+      <!-- PENDIENTE: [CAPTURA REAL] panel de pauta · [CAPTURA REAL] WhatsApp del cierre · [QR] video de la dueña -->
+    </div>
+  </div>
+  <div class="foot"><span><b>Método Cero Caos</b> · Carlos Coder</span></div>
+</section>
+
+<!-- 8 ENCAJE -->
+<section class="slide">
+  <div class="eyebrow">¿Es para ti?</div>
+  <h2 style="margin-bottom:14px">Para quién sí, para quién no.</h2>
+  <div class="tabs" data-tabs>
+    <button class="tab" aria-selected="true" data-t="fit">Es para ti / No es para ti</button>
+    <button class="tab" aria-selected="false" data-t="faq">Preguntas frecuentes</button>
+  </div>
+  <div class="pbox">
+    <div class="pane open" data-p="fit">
+      <div class="fit">
+        <div class="card y"><h3>Es para ti si…</h3>
+          <div class="chk"><i>✓</i><span>Tienes audiencia y vendes un programa o servicio propio.</span></div>
+          <div class="chk"><i>✓</i><span>Vendes “de casualidad”: un mes entra bien y el siguiente no.</span></div>
+          <div class="chk"><i>✓</i><span>Ya probaste una web, el botón “Promocionar” o un freelancer, y concluiste que los anuncios no funcionan.</span></div>
+          <div class="chk"><i>✓</i><span>Estás dispuesto/a a seguir un proceso ordenado y a cerrar las ventas o citas que lleguen. Crear contenido y cerrar ventas es tuyo; el sistema y la pauta son míos.</span></div>
+          <div class="chk"><i>✓</i><span>Puedes invertir mínimo S/ 400 al mes en anuncios.</span></div>
+          <div class="chk"><i>✓</i><span>Vendes una oferta de ticket medio-alto, para que una sola venta cubra buena parte de la inversión.</span></div>
+        </div>
+        <div class="card n"><h3>No es para ti si…</h3>
+          <div class="chk no"><i>✕</i><span>Quieres “solo la web”.</span></div>
+          <div class="chk no"><i>✕</i><span>Quieres que el marketing lo haga todo sin grabar contenido ni seguir el proceso.</span></div>
+          <div class="chk no"><i>✕</i><span>Buscas “100 prospectos al día” o resultados en 30 días.</span></div>
+          <div class="chk no"><i>✕</i><span>Todavía no tienes nada definido que vender.</span></div>
+          <div class="chk no"><i>✕</i><span>Tu ticket es bajo y no tienes el volumen que lo compense.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="pane" data-p="faq">
+      <div class="faq">
+        <details open><summary>“¿Por qué el Diagnóstico cuesta y no es gratis?”</summary><p>Porque lo gratuito atrae curiosos que no valoran el tiempo ni implementan. El pago filtra para trabajar con quien va en serio. Y los S/ 300 se descuentan por completo si contratas dentro de los 7 días.</p></details>
+        <details><summary>“¿Necesito tener web o pasarela lista antes de empezar?”</summary><p>No. Para eso es el Diagnóstico. Si ya tienes herramientas, las auditamos; si partes de cero, diseñamos el camino de compra que te conviene (pasarela, agenda o WhatsApp).</p></details>
+        <details><summary>“Está muy caro.”</summary><p>Compáralo contra lo que hoy pierdes, no contra una web: anuncios quemados, chats sin responder y meses en cero. Por eso el primer paso son S/ 300, no el sistema completo, y se descuentan por completo si avanzas.</p></details>
+        <details><summary>“Ya probé anuncios y no funcionan para mi negocio.”</summary><p>Probablemente no fallaron los anuncios: faltaba una oferta clara y un camino de compra detrás. En mi método la pauta va el día 15, nunca al principio.</p></details>
+        <details><summary>“No tengo tiempo para grabar contenido. Quiero que lo hagan todo por mí.”</summary><p>El sistema capta, da seguimiento y opera la pauta por ti. A ti te deja dos tareas: crear contenido y cerrar ventas, y nadie puede hacerlo por ti. Si buscas que el marketing lo haga todo sin que participes, esto no es para ti, y te lo digo desde ahora.</p></details>
+        <details><summary>“Mejor lo aprendo yo con tutoriales de YouTube.”</summary><p>Puedes. Pero cada fin de semana peleándote con un dominio o una integración es un fin de semana sin atender clientes ni crear contenido. Y la pauta hay que operarla todos los meses sin quemar presupuesto.</p></details>
+        <details><summary>“¿Me prometes resultados de ventas?”</summary><p>No. No prometo un número de ventas ni de prospectos. Prometo una oferta clara, un camino de compra adaptado a tu negocio, alguien capacitado para responder y una pauta operada desde el día 15. Mi caso real es uno solo y te lo muestro como lo que es.</p></details>
+        <details><summary>“¿Y si en el Diagnóstico descubrimos que mi negocio no está listo para el sistema?”</summary><p>Te lo digo con total transparencia, para que no botes tu dinero en algo que todavía no te sirve. Y te quedas con tu Manual Cero Caos, con la ruta exacta de qué ordenar primero.</p></details>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span><b>Método Cero Caos</b> · Carlos Coder</span></div>
+</section>
+
+<!-- 9 INVERSIÓN -->
+<section class="slide">
+  <div class="eyebrow">Inversión y formas de pago</div>
+  <h2 class="wide" style="font-size:34px;margin-bottom:12px;max-width:none">Un camino con tres escalones. Empiezas por el primero.</h2>
+  <label class="sw"><input type="checkbox" id="fromDx"><span>Ya hice el Diagnóstico y contrato dentro de los 7 días</span></label>
+  <div class="ladder">
+    <article class="tier">
+      <span class="k">Escalón 1 · Entrada</span>
+      <h3>Diagnóstico Cero Caos</h3>
+      <div class="pr">S/ 300<small>Pago único</small></div>
+      <p>Sesión 1 a 1 de 60-90 min + auditoría de tu oferta, tu perfil y las fugas en tu WhatsApp + <b>Manual Cero Caos</b> (documento escrito con tu ruta exacta de acción). Se descuenta al 100% si contratas la implementación dentro de los 7 días siguientes. <b>Garantía:</b> si no recibes tu Manual máximo 2 días hábiles (lunes a sábado) después de tu sesión, se te devuelve lo pagado.</p>
+      <a class="btn" data-wa href="#">Empezar por aquí</a>
+    </article>
+    <article class="tier main">
+      <span class="badge">Principal</span>
+      <span class="k">Escalón 2A · Plan Compromiso 3 Meses</span>
+      <h3>Método Cero Caos Completo</h3>
+      <div class="pr" id="prA">S/ 2,000<small id="prAs">al mes, mínimo 3 meses. El armado inicial va incluido en el Mes 1.</small></div>
+      <p>Todo lo de la página 6: entregables, pauta operada desde el día 15, informe mensual y Coder App.</p>
+      <a class="btn" data-wa href="#">Quiero este plan</a>
+    </article>
+    <article class="tier">
+      <span class="k">Escalón 2B · Plan Flexible</span>
+      <h3>Método Cero Caos Completo</h3>
+      <div class="pr" id="prB">S/ 2,500<small id="prBs">de setup, que cubre el Mes 1 completo. Desde el Mes 2: S/ 2,000 al mes, sin permanencia.</small></div>
+      <p>Lo mismo que el Plan Compromiso, sin permanencia.</p>
+      <a class="btn ghost" data-wa href="#">Prefiero sin permanencia</a>
+    </article>
+  </div>
+  <div class="tabs" data-tabs style="margin-bottom:10px">
+    <button class="tab" aria-selected="true" data-t="ap">Lo que pagas aparte</button>
+    <button class="tab" aria-selected="false" data-t="fp">Formas de pago</button>
+    <button class="tab" aria-selected="false" data-t="ca">Cancelación</button>
+  </div>
+  <div class="pbox">
+    <div class="pane open" data-p="ap"><ul class="dots"><li><span>Pauta en Meta/Google: mínimo recomendado <b>S/ 400 al mes</b>. Se paga directo a cada plataforma, con tu propia tarjeta.</span></li><li><span>Consumo de WhatsApp API.</span></li><li><span>Consumo de Inteligencia Artificial en tus flujos.</span></li></ul></div>
+    <div class="pane" data-p="fp"><ul class="dots"><li><span><b>El Diagnóstico se paga en línea con Culqi, antes de la sesión</b>, para apartar tu fecha.</span></li><li><span>El Método Completo: en una cuota o, lo habitual, en dos partes: <b>50% al iniciar y 50% el día 15</b>. Cada mes son 30 días calendario.</span></li><li><span>Recibo por honorarios por defecto. Si necesitas factura, se suma el 18%; los precios no lo incluyen.</span></li></ul></div>
+    <div class="pane" data-p="ca"><ul class="dots"><li><span><b>Después de los 3 meses:</b> sin penalidad, mes a mes, avisando antes del siguiente cobro.</span></li><li><span><b>Antes de los 3 meses:</b> pasas a las condiciones del Plan Flexible y pagas la diferencia de S/ 500 (la misma si vienes del Diagnóstico). No debes los meses restantes ni se reembolsa lo ya pagado. No hay pausa durante los 3 meses. Si yo no entrego la construcción o no enciendo la pauta el día 15 por causa mía, no pagas esa diferencia.</span></li><li><span><b>Al finalizar tu plan,</b> te llevas el archivo de tu landing page, tu base de datos en Excel (en menos de 24 horas) y tu dominio si compraste uno propio. Se da de baja tu acceso a Coder App y el subdominio de carloscoder.com.</span></li><li><span><b>Si no pagas a tiempo:</b> a las 48 horas se bloquea tu acceso a Coder App y se pausan tus campañas hasta que regularices.</span></li></ul></div>
+  </div>
+  <div class="foot"><span><b>Método Cero Caos</b> · Carlos Coder</span></div>
+</section>
+
+<!-- 10 EMPEZAR -->
+<section class="slide end dk">
+  <div class="eyebrow">Cómo empezar</div>
+  <h2>El primer paso no es contratar. Es ver tu caos con números.</h2>
+  <p style="font-size:18px;max-width:46em">Empieza por el <b>Diagnóstico Cero Caos</b>: una sesión conmigo y un documento escrito por <b>S/ 300</b>. Si decides avanzar dentro de los 7 días, se descuenta por completo.</p>
+  <div class="how">
+    <div><span class="num">1</span><span>Clic en el botón: se abre WhatsApp con el mensaje ya escrito. Sofía, del equipo de Carlos, conversa contigo y te envía tu enlace de reserva.</span></div>
+    <div><span class="num">2</span><span>Reservas en línea: eliges tu fecha, respondes unas preguntas rápidas y pagas con Culqi.</span></div>
+    <div><span class="num">3</span><span>Tenemos tu sesión de 60 a 90 min y completamos juntos tu cuenta del caos.</span></div>
+    <div><span class="num">4</span><span>Recibes tu Manual Cero Caos en máximo 2 días hábiles (lunes a sábado).</span></div>
+  </div>
+  <p style="font-size:16px;max-width:52em;margin-bottom:16px">Imagina arrancar el mes con tu oferta ordenada, cero chats al aire y pauta trayendo prospectos que ya saben cuánto cuesta tu servicio. <b>La diferencia entre un escenario y el otro es una sesión y un documento.</b></p>
+  <div><a class="btn light" data-wa href="#" style="font-size:19px;padding:16px 38px">Quiero mi Diagnóstico Cero Caos</a></div>
+  <div class="contact"><span><b>WhatsApp:</b> +51 921 926 452</span><span><b>Instagram / TikTok / YouTube:</b> @carloscoderr</span></div>
+  <div class="final">No te prometo 100 prospectos al día ni resultados en 30 días. Te prometo que lo construyo bien y lo opero.</div>
+  <div class="foot"><span><b>Método Cero Caos</b> · Carlos Coder</span></div>
+</section>
+
+    </div>
+  </div>
+</div>
+
+<div id="bar">
+  <button id="bL" type="button">← Anterior</button>
+  <div style="display:flex;align-items:center;gap:18px"><div id="dots"></div><span id="count"></span></div>
+  <button id="bR" type="button">Siguiente →</button>
+</div>
+</body>
+</html>

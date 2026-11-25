@@ -1,0 +1,7 @@
+/* ENTRADA ÚNICA · se enlaza en todas las páginas: <link rel="stylesheet" href="…/assets/css/main.css">
+   Orden de capas: lo último gana, sin pelear por especificidad. */
+@layer tokens, base, components, layout, deck, page;
+@import url("tokens.css") layer(tokens);
+@import url("base.css") layer(base);
+@import url("components.css") layer(components);
+@import url("layout.css") layer(layout);

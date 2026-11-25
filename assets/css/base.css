@@ -1,0 +1,21 @@
+/* BASE · reset, tipografía y elementos HTML. Sin clases de proyecto. */
+html,body{min-height:100%}
+html{color-scheme:light;-webkit-text-size-adjust:100%}
+body{background:var(--bg);font-family:var(--font);color:var(--ink);font-size:var(--text-base);line-height:1.5;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box;margin:0;padding:0}
+img,svg,video{display:block;max-width:100%}
+ul{list-style:none}button{font-family:inherit;cursor:pointer}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--sage);outline-offset:3px}
+
+/* tipografía */
+.eyebrow{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);margin-bottom:10px}
+h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08}
+h2{font-size:40px;margin-bottom:22px;text-wrap:balance;max-width:20ch}
+h2.wide{max-width:26ch}
+h3{font-size:19px;line-height:1.25}
+p{color:var(--ink2);text-wrap:pretty}
+.sage{color:var(--sage)}
+.small{font-size:13px;color:var(--muted)}
+.lead{font-size:19px;line-height:1.5;max-width:60ch}
+.spacer{flex:1}

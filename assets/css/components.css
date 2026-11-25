@@ -1,0 +1,38 @@
+/* COMPONENTES · piezas reutilizables en cualquier proyecto. */
+.close{margin-top:auto;padding:16px 24px;border-left:5px solid var(--sage);background:var(--sage-bg);border-radius:0 14px 14px 0;font-weight:700;font-size:19px;line-height:1.4;color:var(--ink)}
+.card{border:1px solid var(--line);border-radius:18px;padding:20px 24px;background:#fff}
+.tint{background:var(--tint);border-color:transparent}
+.dark{background:var(--dark);border-color:var(--dark);color:#fff}
+.chk{display:flex;gap:11px;align-items:flex-start;line-height:1.4}
+.chk i{flex:none;width:22px;height:22px;border-radius:50%;background:var(--yes-bg);color:var(--yes);box-shadow:inset 0 0 0 1px #bbf7d0;font-style:normal;font-size:12px;font-weight:800;display:grid;place-items:center;margin-top:1px}
+.chk.no i{background:var(--no-bg);color:var(--no);box-shadow:inset 0 0 0 1px #fecaca}
+.num{flex:none;width:30px;height:30px;border-radius:50%;background:var(--sage);color:#fff;font-weight:800;font-size:14px;display:grid;place-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:14px 30px;font-size:17px;font-weight:700;text-decoration:none;transition:transform .3s var(--ease),background .3s}
+.btn:hover{transform:scale(1.03);background:#000}
+.btn.light{background:#fff;color:var(--ink)}.btn.light:hover{background:#f4f4f5}
+
+/* tabs */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.tab{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:9px 20px;font-weight:700;font-size:14.5px;color:var(--ink);transition:.25s}
+.tab:hover{border-color:var(--ink)}
+.tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.pane{display:none}.pane.open{display:block;animation:fade .45s var(--ease)}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* faq (details) */
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:start}
+.faq details{border:1px solid var(--line);border-radius:16px;background:#fff}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 20px;font-weight:700;font-size:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";font-size:24px;font-weight:500;color:var(--sage);transition:transform .3s var(--ease)}
+.faq details[open] summary:after{transform:rotate(45deg)}
+.faq details p{padding:0 20px 16px;font-size:14.5px;line-height:1.5}
+
+/* interruptor */
+.sw{display:flex;align-items:center;gap:12px;font-weight:600;font-size:14.5px;margin:-6px 0 14px;cursor:pointer}
+.sw input{appearance:none;width:44px;height:25px;border-radius:99px;background:#d4d4d8;position:relative;cursor:pointer;transition:.25s;flex:none}
+.sw input:after{content:"";position:absolute;top:3px;left:3px;width:19px;height:19px;border-radius:50%;background:#fff;transition:.25s var(--ease);box-shadow:0 1px 3px #0003}
+.sw input:checked{background:var(--yes)}.sw input:checked:after{left:22px}
+
+/* insignia */
+.badge{position:absolute;top:-12px;left:20px;background:var(--ink);color:#fff;font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:4px 12px;border-radius:99px}
