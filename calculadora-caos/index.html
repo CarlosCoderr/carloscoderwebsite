@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cuánto te cuesta tu caos · Carlos Coder</title>
+<meta name="description" content="Mini-calculadora del Diagnóstico Cero Caos: se completa en vivo durante la sesión.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../assets/img/carlos-coder.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="calculadora.css">
+<script src="../assets/js/core.js" defer></script>
+<script src="calculadora.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="../"><img src="../assets/img/carlos-coder.svg" alt=""><span>Carlos Coder</span></a>
+  </div>
+</header>
+
+<main>
+  <!-- ENCUADRE -->
+  <section class="section intro">
+    <div class="container stack">
+      <p class="eyebrow">Diagnóstico Cero Caos · Mini-calculadora</p>
+      <h1 class="page-title">Antes de hablar de precio, hagamos una cuenta.</h1>
+      <p class="lead">Hagamos una estimación rápida y conservadora. Pon números aproximados, siempre a la baja, para tener una referencia real antes de hablar de inversión.</p>
+    </div>
+  </section>
+
+  <!-- PARTE A · LA TARJETA -->
+  <section class="section tint-bg">
+    <div class="container">
+      <div class="sheet">
+        <div class="sheet-head">
+          <h2>Lo que ya perdiste</h2>
+          <span class="small">Tu número</span>
+        </div>
+
+        <!-- Fila 1 -->
+        <div class="row" data-row="ads">
+          <div class="row-label">
+            <span class="num">1</span>
+            <div>
+              <h3>Dinero en anuncios que no trajeron clientes</h3>
+              <p class="small">Incluye el botón Promocionar y lo que le pagaste a un freelancer.</p>
+            </div>
+          </div>
+          <div class="row-input">
+            <div class="lines" data-lines="ads"></div>
+            <button class="add" type="button" data-add="ads">+ Sumar otro intento</button>
+          </div>
+          <div class="row-sub" data-sub="ads">S/ 0</div>
+        </div>
+
+        <!-- Fila 2 -->
+        <div class="row" data-row="web">
+          <div class="row-label">
+            <span class="num">2</span>
+            <div>
+              <h3>Dinero en una web que no vende</h3>
+              <p class="small">Lo que pagaste por la web o landing y por mantenerla.</p>
+            </div>
+          </div>
+          <div class="row-input">
+            <div class="lines" data-lines="web"></div>
+            <button class="add" type="button" data-add="web">+ Sumar otro pago</button>
+          </div>
+          <div class="row-sub" data-sub="web">S/ 0</div>
+        </div>
+
+        <!-- Fila 3 -->
+        <div class="row" data-row="zero">
+          <div class="row-label">
+            <span class="num">3</span>
+            <div>
+              <h3>Meses en cero</h3>
+              <p class="small">Ingresos que no entraron en los meses que quedaron casi en cero durante el último año. No es dinero gastado.</p>
+            </div>
+          </div>
+          <div class="row-input">
+            <div class="mult">
+              <label class="field">
+                <span>Meses del último año</span>
+                <div class="stepper">
+                  <button type="button" data-step="-1" aria-label="Un mes menos">−</button>
+                  <input type="text" inputmode="numeric" id="months" value="0" aria-label="Meses en cero">
+                  <button type="button" data-step="1" aria-label="Un mes más">+</button>
+                </div>
+              </label>
+              <span class="times">×</span>
+              <label class="field">
+                <span>Facturación de un mes normal</span>
+                <div class="money"><span>S/</span><input type="text" inputmode="decimal" id="monthly" placeholder="0"></div>
+              </label>
+            </div>
+            <label class="sw half"><input type="checkbox" id="half"><span>Ponerlo a la mitad</span></label>
+            <p class="half-note" id="halfNote" hidden>Se aplica el 50 % a esta estimación: (meses × mes normal) ÷ 2.</p>
+          </div>
+          <div class="row-sub" data-sub="zero">S/ 0</div>
+        </div>
+
+        <!-- Total -->
+        <div class="total" id="totalBox">
+          <div>
+            <p class="eyebrow">Total</p>
+            <p class="small">Anuncios + web + (meses en cero × un mes normal)</p>
+          </div>
+          <button class="btn" type="button" id="sumBtn">Sumar</button>
+          <output class="total-num" id="total" hidden>S/ 0</output>
+        </div>
+
+        <p class="reflect">El precio de este método se compara contra lo que hoy estás perdiendo, no contra el costo de una web.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTE B · FILA EXTRA -->
+  <section class="section">
+    <div class="container">
+      <label class="sw"><input type="checkbox" id="extraToggle"><span>Mostrar la fila extra: venta posiblemente perdida (últimas 3 semanas)</span></label>
+
+      <div class="extra" id="extra" hidden>
+        <div class="extra-head">
+          <h2>Lo que sigue pasando</h2>
+          <span class="pill">Estimación tuya · no suma al total</span>
+        </div>
+        <div class="extra-grid">
+          <div class="field col">
+            <div class="col-top"><label for="chats">Chats sin responder, respondidos tarde o enfriados en las últimas 3 semanas</label></div>
+            <div class="money"><input type="text" inputmode="numeric" id="chats" placeholder="0"><span>chats</span></div>
+            <small>Cada chat cuenta una sola vez.</small>
+          </div>
+          <div class="field col">
+            <div class="col-top"><label for="ticket">Valor de una venta típica</label></div>
+            <div class="money"><span>S/</span><input type="text" inputmode="decimal" id="ticket" placeholder="0"></div>
+            <small>Lo que paga un cliente en promedio.</small>
+          </div>
+          <div class="field col">
+            <div class="col-top">
+              <label for="rate">De esos chats, ¿cuántos crees tú que habrían comprado?</label>
+              <div class="seg" role="radiogroup" aria-label="Unidad">
+                <button type="button" role="radio" aria-checked="true" data-unit="pct">Porcentaje</button>
+                <button type="button" role="radio" aria-checked="false" data-unit="qty">Cantidad</button>
+              </div>
+            </div>
+            <div class="money"><input type="text" inputmode="decimal" id="rate" placeholder="0"><span id="rateUnit">%</span></div>
+            <small id="rateHint">&nbsp;</small>
+          </div>
+        </div>
+        <div class="extra-total">
+          <span>Venta posiblemente perdida (últimas 3 semanas)<em class="no-sum">No suma al total histórico</em></span>
+          <output id="lost">S/ 0</output>
+        </div>
+        <p class="small">Es solo de las últimas 3 semanas. No es dinero que «vas a recuperar» ni usa promedios de mercado.</p>
+      </div>
+
+      <p class="next"><span>Esto es lo que ya perdiste.</span> Ahora veamos qué se arregla primero. <span class="arrow" aria-hidden="true">→</span></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container"><span><b>Carlos Coder</b> · carloscoder.com</span></div>
+</footer>
+
+</body>
+</html>

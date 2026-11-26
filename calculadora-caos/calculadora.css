@@ -1,0 +1,113 @@
+/* PÁGINA · Mini-calculadora «Cuánto te cuesta tu caos» (uso en vivo durante el Diagnóstico). */
+@layer page{
+[hidden]{display:none!important}
+/* cabecera */
+.ghost{border:1.5px solid var(--line);background:var(--bg);color:var(--ink);border-radius:var(--radius-pill);padding:7px 16px;font-weight:700;font-size:14px;transition:border-color .2s}
+.ghost:hover{border-color:var(--ink)}
+.ghost.danger{border-color:var(--no);color:var(--no)}
+
+/* encuadre */
+.intro .lead{max-width:44rem}
+
+/* notas de conducción (solo en modo guía) */
+.note{margin-top:var(--space-2);padding:12px 16px;border-left:4px solid var(--sage);background:var(--sage-bg);border-radius:0 var(--radius-s) var(--radius-s) 0;font-size:14.5px;line-height:1.5;color:var(--ink2)}
+.note.warn{border-color:var(--warn);background:var(--warn-bg)}
+.row .note{grid-column:1 / -1;margin-top:0}
+
+/* tarjeta principal */
+.sheet{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius-l);padding:var(--space-3) var(--space-4);box-shadow:var(--shadow-m)}
+.sheet-head{display:flex;justify-content:space-between;align-items:baseline;gap:var(--space-2);border-bottom:2px solid var(--ink);padding-bottom:var(--space-2)}
+.sheet-head h2{margin:0;font-size:var(--step-2)}
+.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr) 9.5rem;gap:var(--space-2) var(--space-3);align-items:start;padding-block:var(--space-3);border-bottom:1px solid var(--line)}
+.row-label{display:flex;gap:14px;align-items:flex-start}
+.row-label h3{margin-bottom:4px}
+.row-sub{text-align:right;font-weight:800;font-size:var(--step-1);letter-spacing:-.02em;padding-top:6px;font-variant-numeric:tabular-nums}
+.row-sub.off{color:var(--muted)}
+
+/* campos */
+.field{display:grid;gap:6px;font-weight:700;font-size:14px;color:var(--ink)}
+.field>span{line-height:1.35}
+.field small{font-weight:500;color:var(--muted);font-size:12.5px}
+.money{display:flex;align-items:center;border:1.5px solid var(--line);border-radius:var(--radius-s);padding:0 14px;background:var(--bg);transition:border-color .2s}
+.money:focus-within{border-color:var(--ink)}
+.money span{font-weight:700;color:var(--muted);flex:none}
+.money span:first-child{margin-right:8px}.money span:last-child:not(:first-child){margin-left:8px}
+.money input{border:0;outline:0;font:inherit;font-size:18px;font-weight:700;color:var(--ink);padding:11px 0;width:100%;min-width:0;background:transparent;font-variant-numeric:tabular-nums}
+.lines{display:grid;gap:8px}
+.line{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:center}
+.line .x{width:34px;height:34px;border-radius:50%;border:0;background:var(--tint);color:var(--muted);font-size:18px;line-height:1}
+.line .x:hover{background:var(--no-bg);color:var(--no)}
+.line:only-child .x{visibility:hidden}
+.add{margin-top:8px;border:0;background:none;color:var(--sage-d);font-weight:700;font-size:14px;padding:4px 0}
+.add:hover{color:var(--ink)}
+
+.mult{display:grid;grid-template-columns:auto auto minmax(0,1fr);gap:10px;align-items:end}
+.times{font-size:var(--step-1);font-weight:800;color:var(--sage);padding-bottom:10px}
+/* stepper: 3 columnas fijas y ancho al contenido, sin franja vacía a la derecha */
+.stepper{display:inline-grid;grid-template-columns:44px 3.6rem 44px;align-items:stretch;justify-self:start;width:max-content;height:48px;border:1.5px solid var(--line);border-radius:var(--radius-s);overflow:hidden;background:var(--bg);transition:border-color .2s}
+.stepper:focus-within{border-color:var(--ink)}
+.stepper button{display:grid;place-items:center;width:100%;height:100%;padding:0;border:0;background:var(--tint);font-size:20px;font-weight:700;line-height:1;color:var(--ink);cursor:pointer;transition:background .2s}
+.stepper button:hover{background:var(--sage-bg)}
+.stepper button:focus-visible{outline:2px solid var(--ink);outline-offset:-3px}
+.stepper input{width:100%;min-width:0;height:100%;padding:0;border:0;border-inline:1.5px solid var(--line);outline:0;text-align:center;white-space:nowrap;font:inherit;font-size:18px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--ink);background:transparent}
+.sw.half{margin:var(--space-2) 0 0}
+.half-note{margin-top:6px;font-size:13px;font-weight:600;color:var(--sage-d)}
+
+/* total */
+.total{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--space-2);padding-top:var(--space-3)}
+.total .eyebrow{margin:0;font-size:15px;color:var(--ink)}
+.total-num{font-size:var(--step-4);font-weight:800;letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
+.total-num.pop{animation:pop .7s var(--ease)}
+@keyframes pop{from{opacity:0;transform:translateY(12px) scale(.96)}to{opacity:1;transform:none}}
+/* reflexión: cita tranquila, sin fondo ni barra de alerta */
+.reflect{margin-top:var(--space-3);padding-top:var(--space-2);border-top:1px dashed var(--line);font-size:16px;font-style:italic;font-weight:500;line-height:1.5;color:var(--ink2);text-align:center;text-wrap:balance}
+
+/* fila extra (en otro color: es estimación, no gasto) */
+.extra{margin-top:var(--space-2);border:1.5px dashed var(--warn);background:var(--warn-bg);border-radius:var(--radius-l);padding:var(--space-3)}
+.extra-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--space-1);margin-bottom:var(--space-3)}
+.extra-head h2{margin:0;font-size:var(--step-2)}
+.pill{background:var(--bg);color:var(--warn);font-weight:800;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:var(--radius-pill)}
+.extra-grid{display:grid;gap:var(--space-3);grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
+/* cada columna: texto arriba, input anclado abajo, ayuda debajo con alto fijo → los tres inputs en la misma recta */
+.col{display:flex;flex-direction:column;height:100%;gap:8px}
+.col-top{display:flex;flex-direction:column;gap:8px;min-height:4.2em;flex:1 1 auto}
+.col-top label{line-height:1.35}
+.col .money{margin-top:auto}
+.col small{min-height:2.6em;line-height:1.3}
+.extra-total{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--space-2);margin-top:var(--space-3);padding-top:var(--space-2);border-top:1px solid var(--warn);font-weight:600;color:var(--warn)}
+.no-sum{display:block;font-style:normal;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
+.extra-total output{font-size:var(--step-2);font-weight:800;color:var(--warn);font-variant-numeric:tabular-nums}
+.extra>.small{margin-top:var(--space-1)}
+.seg{display:inline-flex;background:var(--bg);border:1.5px solid var(--line);border-radius:var(--radius-pill);padding:3px;justify-self:start}
+.seg button{border:0;background:none;border-radius:var(--radius-pill);padding:5px 14px;font-weight:700;font-size:13px;color:var(--muted)}
+.seg button[aria-checked="true"]{background:var(--ink);color:var(--bg)}
+/* transición final: paso siguiente, no alerta */
+.next{margin-top:var(--space-4);display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;font-size:var(--step-1);font-weight:700;letter-spacing:-.01em;color:var(--muted)}
+.next span:first-child{color:var(--ink)}
+.next .arrow{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:18px}
+
+
+/* móvil */
+@media(max-width:860px){
+  .sheet{padding:var(--space-3) var(--space-2)}
+  .row{grid-template-columns:1fr}
+  .row-sub{text-align:left;padding-top:0}
+  .row-sub::before{content:"Subtotal  ";font-size:13px;font-weight:700;color:var(--muted);letter-spacing:0}
+  .mult{grid-template-columns:1fr}
+  .times{display:none}
+  .extra-grid{grid-template-columns:1fr}
+  .col-top{min-height:0}
+  .col small{min-height:0}
+}
+@media(max-width:480px){
+  .brand span{display:none}
+  h2{font-size:30px}
+}
+
+/* imprimir: solo la cuenta, sin controles ni notas */
+@media print{
+  .site-header,.site-footer,.add,.line .x,#sumBtn,.sw{display:none!important}
+  .section{padding-block:var(--space-2)}
+  .sheet{box-shadow:none}
+  .total-num{display:block!important}
+}
