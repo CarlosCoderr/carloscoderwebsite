@@ -2,7 +2,9 @@
   "trailingSlash": true,
   "redirects": [
     { "source": "/brochure/", "destination": "/presentacion-de-venta/", "permanent": true },
-    { "source": "/brochure/:path*", "destination": "/presentacion-de-venta/:path*", "permanent": true }
+    { "source": "/brochure/:path*", "destination": "/presentacion-de-venta/:path*", "permanent": true },
+    { "source": "/calculadora-caos/", "destination": "/calculadora-del-caos/", "permanent": true },
+    { "source": "/calculadora-caos/:path*", "destination": "/calculadora-del-caos/:path*", "permanent": true }
   ],
   "rewrites": [
     { "source": "/presentacion-de-venta/", "destination": "/presentacion de venta/index.html" },

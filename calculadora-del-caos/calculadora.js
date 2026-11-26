@@ -1,4 +1,4 @@
-/* Mini-calculadora «Cuánto te cuesta tu caos».
+/* Calculadora del caos «Cuánto te cuesta tu caos».
    Total histórico = anuncios + web + (meses en cero × facturación de un mes normal).
    La venta posiblemente perdida (últimas 3 semanas) se calcula aparte y NUNCA suma al total.
    Cada vez que se abre la página empieza en cero. */
