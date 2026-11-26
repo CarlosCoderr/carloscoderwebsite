@@ -18,7 +18,7 @@ carloscoder.com/
 │   │   └── deck.js         ← motor de presentaciones
 │   └── img/                ← logo y fotos de marca
 ├── _plantilla/index.html   ← copia esta carpeta para crear un proyecto nuevo
-└── brochure/               ← un proyecto = una carpeta
+└── presentacion-de-venta/               ← un proyecto = una carpeta
     ├── index.html
     ├── brochure.css        ← solo lo exclusivo del proyecto (dentro de @layer page)
     └── brochure.js
@@ -35,4 +35,4 @@ carloscoder.com/
 - Rutas **relativas** (`../assets/...`), así funciona igual con doble clic en local y en el dominio.
 - Capas CSS: `tokens < base < components < layout < deck < page`. Lo del proyecto siempre gana.
 - WhatsApp: `<a data-wa>`; el mensaje va en `<body data-wa-message="…">` o en el propio enlace. Número en `core.js`.
-- Un proyecto con presentación horizontal usa `<body class="deck">` + `deck.css` + `deck.js` (ver `brochure/`).
+- Un proyecto con presentación horizontal usa `<body class="deck">` + `deck.css` + `deck.js` (ver `presentacion-de-venta/`).

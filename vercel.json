@@ -1,0 +1,7 @@
+{
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/brochure", "destination": "/presentacion-de-venta/", "permanent": true },
+    { "source": "/brochure/:path*", "destination": "/presentacion-de-venta/:path*", "permanent": true }
+  ]
+}
