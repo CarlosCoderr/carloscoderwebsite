@@ -3,14 +3,47 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Carlos Coder · Proyectos</title>
-<meta name="description" content="Proyectos y herramientas de Carlos Coder.">
+<title>Carlos Coder · Recursos</title>
+<meta name="description" content="Recursos del Método Cero Caos: presentación de venta y calculadora del caos.">
 <link rel="icon" href="assets/img/carlos-coder.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/main.css">
 <script src="assets/js/core.js" defer></script>
+<style>
+@layer page{
+  /* tarjetas de recursos */
+  .resources{display:grid;gap:var(--space-3);grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr))}
+  .res{position:relative;display:flex;flex-direction:column;gap:var(--space-2);padding:var(--space-3);border:1px solid var(--line);border-radius:var(--radius-l);background:var(--bg);transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .3s}
+  .res:hover,.res:focus-within{transform:translateY(-4px);border-color:var(--ink);box-shadow:var(--shadow-m)}
+
+  .res-top{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--space-2)}
+  .res-icon{display:grid;place-items:center;width:56px;height:56px;border-radius:var(--radius-s);background:var(--sage-bg);color:var(--sage-d);transition:background .35s var(--ease),color .35s,transform .45s var(--ease)}
+  .res-icon svg{width:28px;height:28px}
+  .res:hover .res-icon,.res:focus-within .res-icon{background:var(--ink);color:var(--bg);transform:rotate(-6deg) scale(1.05)}
+  .res-tag{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:var(--tint);padding:6px 12px;border-radius:var(--radius-pill)}
+
+  .res h2{margin:0;font-size:var(--step-1);letter-spacing:-.02em;line-height:1.2}
+  .res p{color:var(--muted);line-height:1.5}
+
+  /* botón: la flecha avanza y el fondo se rellena al pasar el mouse */
+  .res-btn{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:10px;padding:12px 22px;border:1.5px solid var(--ink);border-radius:var(--radius-pill);font-weight:700;font-size:15px;color:var(--ink);text-decoration:none;background:linear-gradient(var(--ink),var(--ink)) no-repeat left center / 0% 100%;transition:background-size .45s var(--ease),color .35s var(--ease)}
+  .res-btn .arrow{transition:transform .45s var(--ease)}
+  .res:hover .res-btn,.res-btn:focus-visible{color:var(--bg);background-size:100% 100%}
+  .res:hover .res-btn .arrow,.res-btn:focus-visible .arrow{transform:translateX(4px)}
+  .res-btn:focus-visible{outline:2px solid var(--sage);outline-offset:3px}
+  /* toda la tarjeta es clicable: el enlace se extiende sobre la tarjeta */
+  .res-btn::after{content:"";position:absolute;inset:0;border-radius:var(--radius-l)}
+  .res{cursor:pointer}
+
+  @media (prefers-reduced-motion:reduce){
+    .res,.res-icon,.res-btn,.res-btn .arrow{transition:none}
+    .res:hover,.res:focus-within{transform:none}
+    .res:hover .res-icon,.res:focus-within .res-icon{transform:none}
+  }
+}
+</style>
 </head>
 <body>
 
@@ -24,19 +57,37 @@
 <main>
   <section class="section">
     <div class="container stack">
-      <p class="eyebrow">carloscoder.com</p>
-      <h1 class="page-title">Proyectos.</h1>
-      <p class="lead">Sistemas, herramientas y propuestas para ordenar tu negocio.</p>
+      <p class="eyebrow">Método Cero Caos</p>
+      <h1 class="page-title">Recursos.</h1>
+      <p class="lead">Las herramientas que usamos para ordenar tu negocio: entender el método, medir lo que hoy te cuesta el caos y decidir qué se arregla primero.</p>
     </div>
   </section>
 
   <section class="section tint-bg">
-    <div class="container grid">
-      <a class="card" href="presentacion-de-venta/" style="text-decoration:none;display:block">
-        <p class="eyebrow">Brochure</p>
-        <h3>Método Cero Caos</h3>
-        <p class="small" style="margin-top:6px">Diagnóstico, infraestructura y pauta en el orden correcto.</p>
-      </a>
+    <div class="container resources">
+      <article class="res">
+        <div class="res-top">
+          <span class="res-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M12 16v4M8 20h8M7 12l3-3 2 2 4-4"/></svg>
+          </span>
+          <span class="res-tag">Presentación</span>
+        </div>
+        <h2>Presentación de venta</h2>
+        <p>Qué es el Método Cero Caos, cómo trabajamos y en qué orden: diagnóstico, infraestructura y pauta.</p>
+        <a class="res-btn" href="presentacion-de-venta/"><span>Ver presentación</span><span class="arrow" aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="res">
+        <div class="res-top">
+          <span class="res-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/><path d="M8.5 13h.01M12 13h.01M15.5 13h.01M8.5 16.5h.01M12 16.5h.01M15.5 16.5h.01"/></svg>
+          </span>
+          <span class="res-tag">Calculadora</span>
+        </div>
+        <h2>Calculadora del caos</h2>
+        <p>Una cuenta rápida y conservadora de lo que ya perdiste en anuncios, web y meses en cero.</p>
+        <a class="res-btn" href="calculadora-caos/"><span>Abrir calculadora</span><span class="arrow" aria-hidden="true">→</span></a>
+      </article>
     </div>
   </section>
 </main>
