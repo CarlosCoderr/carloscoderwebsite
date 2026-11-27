@@ -36,3 +36,18 @@
 
 /* insignia */
 .badge{position:absolute;top:-12px;left:20px;background:var(--ink);color:#fff;font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:4px 12px;border-radius:99px}
+
+/* texto legal (privacidad, condiciones, eliminación de datos) */
+.legal{max-width:46rem}
+.legal h2{font-size:var(--step-1);letter-spacing:-.02em;line-height:1.25;margin:var(--space-4) 0 var(--space-1)}
+.legal h3{font-size:var(--step-0);margin:var(--space-3) 0 var(--space-1)}
+.legal p,.legal li{line-height:1.7;color:var(--ink2)}
+.legal p+p{margin-top:var(--space-1)}
+.legal ul,.legal ol{padding-left:1.25rem;margin:var(--space-1) 0}
+.legal li+li{margin-top:.35rem}
+.legal a{color:var(--sage-d);text-underline-offset:3px}
+.legal .meta{font-size:14px;color:var(--muted)}
+.legal .note{margin-top:var(--space-3);padding:var(--space-2) var(--space-3);border-left:4px solid var(--sage);background:var(--sage-bg);border-radius:0 var(--radius-s) var(--radius-s) 0}
+.legal-links{display:flex;flex-wrap:wrap;gap:var(--space-2)}
+.legal-links a{color:var(--muted);text-decoration:none}
+.legal-links a:hover,.legal-links a[aria-current="page"]{color:var(--ink)}
